@@ -40,6 +40,12 @@ public class SampleController {
         return sampleService.findAllSAmple();
     }
 
+    @GetMapping("/samples/{id}")
+
+    public SampleDto getById(@PathVariable int id){
+        return sampleService.findSampleById(id);
+    }
+
     @DeleteMapping("/sample/{id}")
     public String deleteSample(@PathVariable int id)
     {
